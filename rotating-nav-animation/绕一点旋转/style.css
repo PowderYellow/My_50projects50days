@@ -17,6 +17,7 @@ body {
     background-color: #fafafa;
     width: 100vw;
     min-height: 80vh;
+
     transform-origin: top left;
     transition: transform 0.5s linear;
 
@@ -41,7 +42,7 @@ body {
 
     position: relative;
 
-
+    /* 写在这里的话去掉active后也有动画 */
     transition: transform 0.5s linear;
 
 }

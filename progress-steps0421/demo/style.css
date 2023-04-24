@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #383838;
+
+}
+
+.container{
+    text-align: center;
+}
+
+body {
+    background-color: #1f1f1f;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+
+
+.progress-container {
+
+    border: 2px solid red;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    position: relative;
+    max-width: 350px;
+    margin-bottom: 30px;
+
+}
+
+
+.progress-container::before {
+
+    /* 如果加::before则必须有content,不然没东西显示 */
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--line-border-empty);
+
+    /* transform可以做到绝对居中 */
+    transform: translateY(-50%);
+    /* position的位置是以左上角为原点的移动的 */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+
+}
+
+
+.circle {
+    background-color: #1f1f1f;
+    color: #e2e2e2;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+
+}
